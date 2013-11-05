@@ -43,7 +43,7 @@ if(window.location == 'https://jada.acu.edu:4445/pls/ssbprod/bwskfreg.P_CheckAlt
     		//document.getElementById('crn_id7').value = "XXXXX";
 		//Change the CRN numbers to desired classes
     
-		document.getElementsByName('REG_BTN’)[0].click();
+		document.getElementsByName('REG_BTN')[0].click();
 		//submits form        
     }
 
