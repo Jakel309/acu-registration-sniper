@@ -19,16 +19,13 @@
 //verifies user is on pre-registration page and then adds CRN's then submits form
 //console.log(window.location.href);
 if(window.location.href == 'https://jada.acu.edu:4445/pls/ssbprod/bwskfreg.P_AltPin'){
-    //console.log("here");
     //enter the hour and minute of your registration
-        var registrationHour = 15;
-        //var registrationMinute = 0;
-    //console.log("here");
+    var registrationHour = 15;
+    
     //gets the current system hour and minute
     var currentDate = new Date();
-        var currentHour = currentDate.getHours();
-        //var currentMinute = currentDate.getMinutes();
-    //console.log(currentHour);
+    var currentHour = currentDate.getHours();
+        
     //continuously refreshes the page until the it is time
     if((currentHour <= registrationHour)){
         //console.log("Current time: " + currentHour);
@@ -37,12 +34,12 @@ if(window.location.href == 'https://jada.acu.edu:4445/pls/ssbprod/bwskfreg.P_Alt
         }
     else{
                 //Comment out the lines you are not using.
-                document.getElementById('crn_id1').value = "14488";
-                document.getElementById('crn_id2').value = "14480";
-                document.getElementById('crn_id3').value = "14471";
-                document.getElementById('crn_id4').value = "14478";
-                document.getElementById('crn_id5').value = "14535";
-                document.getElementById('crn_id6').value = "14541";
+                document.getElementById('crn_id1').value = "XXXXX";
+                document.getElementById('crn_id2').value = "XXXXX";
+                document.getElementById('crn_id3').value = "XXXXX";
+                document.getElementById('crn_id4').value = "XXXXX";
+                document.getElementById('crn_id5').value = "XXXXX";
+                document.getElementById('crn_id6').value = "XXXXX";
                 //document.getElementById('crn_id7').value = "XXXXX";
                 //Change the CRN numbers to desired classes
     
