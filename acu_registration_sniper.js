@@ -13,44 +13,44 @@
 //USAGE: Add in the CRN numbers of your classes starting on line 24. Replace the 'XXXXX'
 //with your classes CRN. Load script on the 'Student' tab of the 'Banner Self Service' tab
 //of My Marist. The script will launch upon clicking the 'add or drop classes' option.
+//After clicking on that link, submit your registration code, then go back to menu then go back to
+//'add or drop classes' and it will start running.
 
 //verifies user is on pre-registration page and then adds CRN's then submits form
-if(window.location == 'https://jada.acu.edu:4445/pls/ssbprod/bwskfreg.P_CheckAltPin'){
-    
+//console.log(window.location.href);
+if(window.location.href == 'https://jada.acu.edu:4445/pls/ssbprod/bwskfreg.P_AltPin'){
+    //console.log("here");
     //enter the hour and minute of your registration
-	var registrationHour = 15;
-	var registrationMinute = 0;
-    
+        var registrationHour = 15;
+        //var registrationMinute = 0;
+    //console.log("here");
     //gets the current system hour and minute
     var currentDate = new Date();
-	var currentHour = currentDate.getHours();
-	var currentMinute = currentDate.getMinutes();
-    
+        var currentHour = currentDate.getHours();
+        //var currentMinute = currentDate.getMinutes();
+    //console.log(currentHour);
     //continuously refreshes the page until the it is time
-    if((currentHour <= registrationHour) && (currentMinute < registrationMinute)){
-        //console.log("Current time: " + currentHour + ":" + currentMinute);
-        //console.log("Registration time: " + registrationHour + ":" + registrationMinute);
+    if((currentHour <= registrationHour)){
+        //console.log("Current time: " + currentHour);
+        //console.log("Registration time: " + registrationHour);
         location.reload();
-	}
+        }
     else{
-		//Comment out the lines you are not using.
-		document.getElementById('crn_id1').value = "XXXXX";
-		document.getElementById('crn_id2').value = "XXXXX";
-		document.getElementById('crn_id3').value = "XXXXX";
-		document.getElementById('crn_id4').value = "XXXXX";
-    		//document.getElementById('crn_id5').value = "XXXXX";
-		//document.getElementById('crn_id6').value = "XXXXX";
-    		//document.getElementById('crn_id7').value = "XXXXX";
-		//Change the CRN numbers to desired classes
+                //Comment out the lines you are not using.
+                document.getElementById('crn_id1').value = "14488";
+                document.getElementById('crn_id2').value = "14480";
+                document.getElementById('crn_id3').value = "14471";
+                document.getElementById('crn_id4').value = "14478";
+                document.getElementById('crn_id5').value = "14535";
+                document.getElementById('crn_id6').value = "14541";
+                //document.getElementById('crn_id7').value = "XXXXX";
+                //Change the CRN numbers to desired classes
     
-		document.getElementsByName('REG_BTN')[0].click();
-		//submits form        
+                document.getElementsByName('REG_BTN')[0].click();
+                //submits form        
     }
 
-	//verifies user is on post-registration page and alerts completion
+        //verifies user is on post-registration page and alerts completion
 }else if(window.location == 'https://jada.acu.edu:4445/pls/ssbprod/bwckcoms.P_Regs'){
-	alert("Success!");
+        alert("Success!");
 }
-
-    
-return;
